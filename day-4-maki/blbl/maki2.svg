@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="78.134" height="55.475" viewBox="0 0 78.134 55.475">
-  <g id="maki2" transform="translate(-979 -630.482)" opacity="0.996">
-    <path id="Union_5" data-name="Union 5" d="M.02,43.755H0V12.5H.02A3.85,3.85,0,0,1,0,12.111C0,5.422,17.491,0,39.067,0S78.134,5.422,78.134,12.111a3.85,3.85,0,0,1-.02.391h.02V43.755h-.02c-.665,6.508-17.892,11.72-39.047,11.72S.685,50.262.02,43.755Z" transform="translate(979 630.482)" fill="#151515"/>
-    <ellipse id="Ellipse_17" data-name="Ellipse 17" cx="32.816" cy="6.641" rx="32.816" ry="6.641" transform="translate(985.251 634.388)" fill="#fff"/>
-    <ellipse id="Ellipse_18" data-name="Ellipse 18" cx="11.72" cy="2.344" rx="11.72" ry="2.344" transform="translate(1006.347 639.076)" fill="#ff7979"/>
-  </g>
-</svg>
