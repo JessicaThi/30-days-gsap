@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page distorsion effect</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="overlay first"></div>
+      <div class="overlay second"></div>
+      <div class="overlay third"></div>
+
+      <nav class="navbar">
+        <div class="menu">
+          <ion-icon name="ios-menu"></ion-icon>
+        </div>
+        <div class="lang">eng</div>
+        <div class="search">
+          <ion-icon name="ios-search"></ion-icon>
+        </div>
+      </nav>
+
+      <div class="media">
+        <ul>
+          <li>Facebook</li>
+          <li>Instagram</li>
+          <li>Twitter</li>
+        </ul>
+      </div>
+
+      <div class="text">
+        <h1><span class="hide-text">Toni&guy</span></h1>
+        <h2>duality</h2>
+        <h3>
+          <span class="hide-text">
+            Collection 2017 <br />
+            duality</span
+          >
+        </h3>
+        <p>
+          <span class="hide-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, qui
+            eveniet. Quae quisquam placeat nam at animi odit nisi aspernatur
+            exercitationem molestias voluptatibus possimus illum, veritatis,
+            laborum facere in perspiciatis.
+          </span>
+        </p>
+      </div>
+
+      <div class="sponsor">
+        <img
+          src="https://raw.githubusercontent.com/codicts/Fashion-Landing-Page/master/images/sponsor-logo.png"
+          alt="Logo sponsor london fashion week"
+        />
+        <p>official sponsor</p>
+      </div>
+
+      <div class="distorsion"></div>
+    </div>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"></script>
+    <script src="./hover-effect.umd.js"></script>
+    <script>
+      //Based on this Tutorial : https://www.youtube.com/watch?v=kzVgkrCiDEo
+      //from YouTube channel "codicts"
+
+      new hoverEffect({
+        parent: document.querySelector(".distorsion"),
+        intensity: 0.2,
+        image1:
+          "https://raw.githubusercontent.com/codicts/Fashion-Landing-Page/master/images/01.png",
+        image2:
+          "https://raw.githubusercontent.com/codicts/Fashion-Landing-Page/master/images/02.png",
+        displacementImage:
+          "https://raw.githubusercontent.com/codicts/Fashion-Landing-Page/master/images/diss.png",
+        imagesRatio: 380 / 300,
+      });
+
+      TweenMax.staggerFrom(
+        ".navbar div",
+        1.5,
+        {
+          delay: 1.5,
+          opacity: 0,
+          y: "20",
+          ease: Expo.easeInOut,
+        },
+        0.08
+      );
+
+      TweenMax.staggerFrom(
+        ".media ul li",
+        1.5,
+        {
+          delay: 1.5,
+          opacity: 0,
+          x: "-20",
+          ease: Expo.easeInOut,
+        },
+        0.08
+      );
+
+      TweenMax.from(".text h1 .hide-text", 1.5, {
+        delay: 1,
+        y: "100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".text h3 .hide-text", 1.5, {
+        delay: 1.2,
+        y: "100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".text p .hide-text", 1.5, {
+        delay: 1.3,
+        y: "100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".text h2", 1.5, {
+        delay: 1.5,
+        opacity: 0,
+        x: "-10000",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".sponsor img", 1.5, {
+        delay: 1.5,
+        opacity: 0,
+        y: "20",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".sponsor p", 1.5, {
+        delay: 1.6,
+        opacity: 0,
+        y: "20",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".distorsion", 1.5, {
+        delay: 2,
+        opacity: 0,
+        y: "20",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.to(".first", 1.5, {
+        delay: 0.5,
+        top: "-100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.to(".second", 1.5, {
+        delay: 0.7,
+        top: "-100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.to(".third", 1.5, {
+        delay: 0.9,
+        top: "-100%",
+        ease: Expo.easeInOut,
+      });
+    </script>
+  </body>
+</html>

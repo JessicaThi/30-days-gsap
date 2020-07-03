@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+header,
+footer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: #f0f8ff;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+h1 + p {
+  font-size: 10px;
+}
+
+.animation {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.paper-plane {
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+}
