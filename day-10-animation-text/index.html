@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section>
+      <div class="intro-text">
+        <p>Let's Animate</p>
+        <button class="btn">Click Me Now!</button>
+      </div>
+      <div class="big-text">
+        <h1>
+          <span class="hide-text">We create</span>
+        </h1>
+        <h1>
+          <span class="hide-text">Unforgettable</span>
+        </h1>
+        <h1>
+          <span class="hide-text">Moments</span>
+        </h1>
+        <h1>
+          <span class="hide-text">& Memories</span>
+        </h1>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script>
+      tl = new TimelineMax({ paused: true });
+
+      tl.to(".btn", 0.3, { opacity: 0 })
+        .to(".intro-text p", 0.3, { opacity: 0 })
+        .staggerFrom(
+          ".hide-text",
+          1.5,
+          { y: "100%", ease: Power4.easeOut },
+          0.15
+        );
+
+      document.querySelector("button").addEventListener("click", letsAnimate);
+      function letsAnimate() {
+        tl.play();
+      }
+    </script>
+  </body>
+</html>
