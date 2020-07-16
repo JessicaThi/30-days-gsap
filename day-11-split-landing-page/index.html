@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Split landing page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="menu"><ion-icon name="ios-menu"></ion-icon></div>
+      <div class="logo"><ion-icon name="ios-heart"></ion-icon>mjsk</div>
+      <div class="search"><ion-icon name="ios-search"></ion-icon></div>
+      <div class="cart"><ion-icon name="ios-cart"></ion-icon></div>
+      <div class="profile"><img src="images/profile.jpg" alt="" /></div>
+    </nav>
+
+    <div class="content">
+      <div class="split left">
+        <img src="images/skateboard.png" alt="" class="skateboard" />
+        <div class="text">
+          <p class="subtitle">cruiser skateboard</p>
+          <h1 class="title">
+            mmm ahhh <br />
+            ..push it!
+          </h1>
+          <p class="desc">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias sint
+            voluptatem tempora ipsam expedita?
+          </p>
+          <button class="button">Discover More</button>
+        </div>
+      </div>
+      <div class="split right">
+        <img src="images/shoes.png" alt="" class="shoes" />
+        <div class="text">
+          <p class="subtitle">adidas pharrel williams tennis hu</p>
+          <h1 class="title">
+            because <br />
+            i'm happy <br> again
+          </h1>
+          <p class="desc">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias sint
+            voluptatem tempora ipsam expedita?
+          </p>
+          <button class="button">Discover More</button>
+      </div>
+    </div>
+
+    <div class="slider">
+      <div class="pages">
+        <span>01</span>06
+      </div>
+      <div class="arrows">
+        <ion-icon name="ios-arrow-back"></ion-icon>
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>
+      //https://www.youtube.com/watch?v=DvwP5Vz4y4Q
+      //From Codicts
+      
+      const content = document.querySelector('.content');
+      const right = document.querySelector('.right');
+      const left = document.querySelector('.left');
+
+      left.addEventListener('mouseenter', () => {
+        content.classList.add('hover-left')
+      })
+
+      left.addEventListener('mouseleave', () => {
+        content.classList.remove('hover-left')
+      })
+
+      right.addEventListener('mouseenter', () => {
+        content.classList.add('hover-right')
+      })
+
+      right.addEventListener('mouseleave', () => {
+        content.classList.remove('hover-right')
+      })
+    </script>
+  </body>
+</html>
