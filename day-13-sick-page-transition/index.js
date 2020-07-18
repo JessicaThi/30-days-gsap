@@ -1,4 +1,4 @@
-//thanks to DesignCourse for his tutorial : https://www.youtube.com/watch?v=aMucZErEdZg&t=323s
+//thanks to DesignCourse for his tutorial : https://www.youtube.com/watch?v=aMucZErEdZg&t
 
 function pageTransition() {
   var tl = gsap.timeline();
